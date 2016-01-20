@@ -1,0 +1,515 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE29D1421C4E3CEA00A554AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE29D1411C4E3CEA00A554AC /* AppDelegate.swift */; };
+		CE29D1441C4E3CEA00A554AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE29D1431C4E3CEA00A554AC /* ViewController.swift */; };
+		CE29D1471C4E3CEA00A554AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE29D1451C4E3CEA00A554AC /* Main.storyboard */; };
+		CE29D1491C4E3CEA00A554AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE29D1481C4E3CEA00A554AC /* Assets.xcassets */; };
+		CE29D14C1C4E3CEA00A554AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE29D14A1C4E3CEA00A554AC /* LaunchScreen.storyboard */; };
+		CE29D1571C4E3CEA00A554AC /* ZHAnimationPieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE29D1561C4E3CEA00A554AC /* ZHAnimationPieTests.swift */; };
+		CE29D1621C4E3CEA00A554AC /* ZHAnimationPieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE29D1611C4E3CEA00A554AC /* ZHAnimationPieUITests.swift */; };
+		CE29D1701C4E3D0400A554AC /* ZHAnimationPie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE29D16F1C4E3D0400A554AC /* ZHAnimationPie.swift */; settings = {ASSET_TAGS = (); }; };
+		CE29D1B31C4E659100A554AC /* ZHFannedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE29D1B21C4E659100A554AC /* ZHFannedModel.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE29D1531C4E3CEA00A554AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE29D1361C4E3CEA00A554AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE29D13D1C4E3CEA00A554AC;
+			remoteInfo = ZHAnimationPie;
+		};
+		CE29D15E1C4E3CEA00A554AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE29D1361C4E3CEA00A554AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE29D13D1C4E3CEA00A554AC;
+			remoteInfo = ZHAnimationPie;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CE29D13E1C4E3CEA00A554AC /* ZHAnimationPie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZHAnimationPie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE29D1411C4E3CEA00A554AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE29D1431C4E3CEA00A554AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE29D1461C4E3CEA00A554AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE29D1481C4E3CEA00A554AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE29D14B1C4E3CEA00A554AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE29D14D1C4E3CEA00A554AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE29D1521C4E3CEA00A554AC /* ZHAnimationPieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZHAnimationPieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE29D1561C4E3CEA00A554AC /* ZHAnimationPieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHAnimationPieTests.swift; sourceTree = "<group>"; };
+		CE29D1581C4E3CEA00A554AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE29D15D1C4E3CEA00A554AC /* ZHAnimationPieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZHAnimationPieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE29D1611C4E3CEA00A554AC /* ZHAnimationPieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHAnimationPieUITests.swift; sourceTree = "<group>"; };
+		CE29D1631C4E3CEA00A554AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE29D16F1C4E3D0400A554AC /* ZHAnimationPie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHAnimationPie.swift; sourceTree = "<group>"; };
+		CE29D1B21C4E659100A554AC /* ZHFannedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHFannedModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE29D13B1C4E3CEA00A554AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE29D14F1C4E3CEA00A554AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE29D15A1C4E3CEA00A554AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE29D1351C4E3CEA00A554AC = {
+			isa = PBXGroup;
+			children = (
+				CE29D1401C4E3CEA00A554AC /* ZHAnimationPie */,
+				CE29D1551C4E3CEA00A554AC /* ZHAnimationPieTests */,
+				CE29D1601C4E3CEA00A554AC /* ZHAnimationPieUITests */,
+				CE29D13F1C4E3CEA00A554AC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE29D13F1C4E3CEA00A554AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE29D13E1C4E3CEA00A554AC /* ZHAnimationPie.app */,
+				CE29D1521C4E3CEA00A554AC /* ZHAnimationPieTests.xctest */,
+				CE29D15D1C4E3CEA00A554AC /* ZHAnimationPieUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE29D1401C4E3CEA00A554AC /* ZHAnimationPie */ = {
+			isa = PBXGroup;
+			children = (
+				CE29D1411C4E3CEA00A554AC /* AppDelegate.swift */,
+				CE29D1431C4E3CEA00A554AC /* ViewController.swift */,
+				CE29D1451C4E3CEA00A554AC /* Main.storyboard */,
+				CE29D1481C4E3CEA00A554AC /* Assets.xcassets */,
+				CE29D14A1C4E3CEA00A554AC /* LaunchScreen.storyboard */,
+				CE29D14D1C4E3CEA00A554AC /* Info.plist */,
+				CE29D16F1C4E3D0400A554AC /* ZHAnimationPie.swift */,
+				CE29D1B21C4E659100A554AC /* ZHFannedModel.swift */,
+			);
+			path = ZHAnimationPie;
+			sourceTree = "<group>";
+		};
+		CE29D1551C4E3CEA00A554AC /* ZHAnimationPieTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE29D1561C4E3CEA00A554AC /* ZHAnimationPieTests.swift */,
+				CE29D1581C4E3CEA00A554AC /* Info.plist */,
+			);
+			path = ZHAnimationPieTests;
+			sourceTree = "<group>";
+		};
+		CE29D1601C4E3CEA00A554AC /* ZHAnimationPieUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CE29D1611C4E3CEA00A554AC /* ZHAnimationPieUITests.swift */,
+				CE29D1631C4E3CEA00A554AC /* Info.plist */,
+			);
+			path = ZHAnimationPieUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE29D13D1C4E3CEA00A554AC /* ZHAnimationPie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE29D1661C4E3CEA00A554AC /* Build configuration list for PBXNativeTarget "ZHAnimationPie" */;
+			buildPhases = (
+				CE29D13A1C4E3CEA00A554AC /* Sources */,
+				CE29D13B1C4E3CEA00A554AC /* Frameworks */,
+				CE29D13C1C4E3CEA00A554AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZHAnimationPie;
+			productName = ZHAnimationPie;
+			productReference = CE29D13E1C4E3CEA00A554AC /* ZHAnimationPie.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE29D1511C4E3CEA00A554AC /* ZHAnimationPieTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE29D1691C4E3CEA00A554AC /* Build configuration list for PBXNativeTarget "ZHAnimationPieTests" */;
+			buildPhases = (
+				CE29D14E1C4E3CEA00A554AC /* Sources */,
+				CE29D14F1C4E3CEA00A554AC /* Frameworks */,
+				CE29D1501C4E3CEA00A554AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE29D1541C4E3CEA00A554AC /* PBXTargetDependency */,
+			);
+			name = ZHAnimationPieTests;
+			productName = ZHAnimationPieTests;
+			productReference = CE29D1521C4E3CEA00A554AC /* ZHAnimationPieTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CE29D15C1C4E3CEA00A554AC /* ZHAnimationPieUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE29D16C1C4E3CEA00A554AC /* Build configuration list for PBXNativeTarget "ZHAnimationPieUITests" */;
+			buildPhases = (
+				CE29D1591C4E3CEA00A554AC /* Sources */,
+				CE29D15A1C4E3CEA00A554AC /* Frameworks */,
+				CE29D15B1C4E3CEA00A554AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE29D15F1C4E3CEA00A554AC /* PBXTargetDependency */,
+			);
+			name = ZHAnimationPieUITests;
+			productName = ZHAnimationPieUITests;
+			productReference = CE29D15D1C4E3CEA00A554AC /* ZHAnimationPieUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE29D1361C4E3CEA00A554AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = personal;
+				TargetAttributes = {
+					CE29D13D1C4E3CEA00A554AC = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = CV7MH8K7UH;
+					};
+					CE29D1511C4E3CEA00A554AC = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = CV7MH8K7UH;
+						TestTargetID = CE29D13D1C4E3CEA00A554AC;
+					};
+					CE29D15C1C4E3CEA00A554AC = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = CV7MH8K7UH;
+						TestTargetID = CE29D13D1C4E3CEA00A554AC;
+					};
+				};
+			};
+			buildConfigurationList = CE29D1391C4E3CEA00A554AC /* Build configuration list for PBXProject "ZHAnimationPie" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE29D1351C4E3CEA00A554AC;
+			productRefGroup = CE29D13F1C4E3CEA00A554AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE29D13D1C4E3CEA00A554AC /* ZHAnimationPie */,
+				CE29D1511C4E3CEA00A554AC /* ZHAnimationPieTests */,
+				CE29D15C1C4E3CEA00A554AC /* ZHAnimationPieUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE29D13C1C4E3CEA00A554AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE29D14C1C4E3CEA00A554AC /* LaunchScreen.storyboard in Resources */,
+				CE29D1491C4E3CEA00A554AC /* Assets.xcassets in Resources */,
+				CE29D1471C4E3CEA00A554AC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE29D1501C4E3CEA00A554AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE29D15B1C4E3CEA00A554AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE29D13A1C4E3CEA00A554AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE29D1441C4E3CEA00A554AC /* ViewController.swift in Sources */,
+				CE29D1B31C4E659100A554AC /* ZHFannedModel.swift in Sources */,
+				CE29D1701C4E3D0400A554AC /* ZHAnimationPie.swift in Sources */,
+				CE29D1421C4E3CEA00A554AC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE29D14E1C4E3CEA00A554AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE29D1571C4E3CEA00A554AC /* ZHAnimationPieTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE29D1591C4E3CEA00A554AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE29D1621C4E3CEA00A554AC /* ZHAnimationPieUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE29D1541C4E3CEA00A554AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE29D13D1C4E3CEA00A554AC /* ZHAnimationPie */;
+			targetProxy = CE29D1531C4E3CEA00A554AC /* PBXContainerItemProxy */;
+		};
+		CE29D15F1C4E3CEA00A554AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE29D13D1C4E3CEA00A554AC /* ZHAnimationPie */;
+			targetProxy = CE29D15E1C4E3CEA00A554AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CE29D1451C4E3CEA00A554AC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE29D1461C4E3CEA00A554AC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CE29D14A1C4E3CEA00A554AC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE29D14B1C4E3CEA00A554AC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE29D1641C4E3CEA00A554AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE29D1651C4E3CEA00A554AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE29D1671C4E3CEA00A554AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ZHAnimationPie/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stackJolin.www.ZHAnimationPie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CE29D1681C4E3CEA00A554AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ZHAnimationPie/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stackJolin.www.ZHAnimationPie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CE29D16A1C4E3CEA00A554AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZHAnimationPieTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stackJolin.www.ZHAnimationPieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZHAnimationPie.app/ZHAnimationPie";
+			};
+			name = Debug;
+		};
+		CE29D16B1C4E3CEA00A554AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZHAnimationPieTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stackJolin.www.ZHAnimationPieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZHAnimationPie.app/ZHAnimationPie";
+			};
+			name = Release;
+		};
+		CE29D16D1C4E3CEA00A554AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZHAnimationPieUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stackJolin.www.ZHAnimationPieUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZHAnimationPie;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		CE29D16E1C4E3CEA00A554AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZHAnimationPieUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.stackJolin.www.ZHAnimationPieUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZHAnimationPie;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE29D1391C4E3CEA00A554AC /* Build configuration list for PBXProject "ZHAnimationPie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE29D1641C4E3CEA00A554AC /* Debug */,
+				CE29D1651C4E3CEA00A554AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE29D1661C4E3CEA00A554AC /* Build configuration list for PBXNativeTarget "ZHAnimationPie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE29D1671C4E3CEA00A554AC /* Debug */,
+				CE29D1681C4E3CEA00A554AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CE29D1691C4E3CEA00A554AC /* Build configuration list for PBXNativeTarget "ZHAnimationPieTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE29D16A1C4E3CEA00A554AC /* Debug */,
+				CE29D16B1C4E3CEA00A554AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CE29D16C1C4E3CEA00A554AC /* Build configuration list for PBXNativeTarget "ZHAnimationPieUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE29D16D1C4E3CEA00A554AC /* Debug */,
+				CE29D16E1C4E3CEA00A554AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE29D1361C4E3CEA00A554AC /* Project object */;
+}
