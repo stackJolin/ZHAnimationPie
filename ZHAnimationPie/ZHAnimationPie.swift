@@ -25,6 +25,8 @@ class ZHAnimationPie: UIView {
     private var valueArray: [ZHFannedModel] = [ZHFannedModel]()
     //所有的扇形
     private var fanArray:[CAShapeLayer] = [CAShapeLayer]()
+    //所有的Label
+    private var fanLabels:[UILabel] = [UILabel]()
     //重载构造函数
     init(frame:CGRect,values:[ZHFannedModel]){
         valueArray = values
@@ -50,6 +52,8 @@ class ZHAnimationPie: UIView {
         self.setDataGroups()
         //根据分组创建扇形对应的layer
         self.createLayer()
+        //创建label
+        self.createFanLabels()
         //创建layer的遮罩
         self.createmaskLayer()
         //执行遮罩层的动画
@@ -123,6 +127,35 @@ class ZHAnimationPie: UIView {
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         self.maskLayer?.addAnimation(animation, forKey: "animateWithMaskLayer")
     }
+    
+    //创建所有的fanLabel
+    private func createFanLabels(){
+        for i in 0..<self.valueArray.count{
+            let fanLabel:UILabel = percentLabel(i)
+            self.addSubview(fanLabel)
+            fanLabels.append(fanLabel)
+        }
+    }
+    
+    //单个百分比label创建
+    private func percentLabel(index:Int) -> UILabel{
+        //获取subLayer的中心角度
+        let centerAngle:Float = (self.startAngleArray[index].floatValue + self.endAngleArray[index].floatValue) * 2 * Float(M_PI) * 0.5
+        print(centerAngle)
+        //计算subLayer中心点的坐标
+        let centerX:CGFloat = self.pieRadius! + CGFloat(cos(centerAngle)) * 0.5 * self.pieRadius!
+        let centerY:CGFloat = self.pieRadius! + CGFloat(sin(centerAngle)) * 0.5 * self.pieRadius!
+        print(centerX,centerY)
+        //创建Label
+        let label:UILabel = UILabel()
+        label.text = NSString(string: "\(self.percentArray[index].floatValue * 100)%") as String
+        label.textAlignment = NSTextAlignment.Center
+        label.backgroundColor = UIColor.clearColor()
+        label.font = UIFont.systemFontOfSize(10)
+        label.sizeToFit()
+        label.center = CGPointMake(centerX, centerY)
+        return label
+    }
 }
 
 //Mark - 手势点击方法
@@ -142,9 +175,6 @@ extension ZHAnimationPie{
     private func transFormSelectedLayer(subLayer:CAShapeLayer){
         
     }
-}
-extension ZHAnimationPie{
-    
 }
 
 
