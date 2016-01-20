@@ -17,6 +17,7 @@
 		CE29D1701C4E3D0400A554AC /* ZHAnimationPie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE29D16F1C4E3D0400A554AC /* ZHAnimationPie.swift */; settings = {ASSET_TAGS = (); }; };
 		CE29D1B31C4E659100A554AC /* ZHFannedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE29D1B21C4E659100A554AC /* ZHFannedModel.swift */; settings = {ASSET_TAGS = (); }; };
 		CE29D1B51C4F816300A554AC /* ZHShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE29D1B41C4F816300A554AC /* ZHShapeLayer.swift */; settings = {ASSET_TAGS = (); }; };
+		CE29D1B71C4FB55700A554AC /* animationPie.gif in Resources */ = {isa = PBXBuildFile; fileRef = CE29D1B61C4FB55700A554AC /* animationPie.gif */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		CE29D16F1C4E3D0400A554AC /* ZHAnimationPie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHAnimationPie.swift; sourceTree = "<group>"; };
 		CE29D1B21C4E659100A554AC /* ZHFannedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHFannedModel.swift; sourceTree = "<group>"; };
 		CE29D1B41C4F816300A554AC /* ZHShapeLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHShapeLayer.swift; sourceTree = "<group>"; };
+		CE29D1B61C4FB55700A554AC /* animationPie.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animationPie.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		CE29D1401C4E3CEA00A554AC /* ZHAnimationPie */ = {
 			isa = PBXGroup;
 			children = (
+				CE29D1B61C4FB55700A554AC /* animationPie.gif */,
 				CE29D1411C4E3CEA00A554AC /* AppDelegate.swift */,
 				CE29D1431C4E3CEA00A554AC /* ViewController.swift */,
 				CE29D1451C4E3CEA00A554AC /* Main.storyboard */,
@@ -242,6 +245,7 @@
 			files = (
 				CE29D14C1C4E3CEA00A554AC /* LaunchScreen.storyboard in Resources */,
 				CE29D1491C4E3CEA00A554AC /* Assets.xcassets in Resources */,
+				CE29D1B71C4FB55700A554AC /* animationPie.gif in Resources */,
 				CE29D1471C4E3CEA00A554AC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +416,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZHAnimationPie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stackJolin.www.ZHAnimationPie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -423,6 +428,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZHAnimationPie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stackJolin.www.ZHAnimationPie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
