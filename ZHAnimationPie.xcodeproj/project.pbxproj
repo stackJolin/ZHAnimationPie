@@ -16,6 +16,7 @@
 		CE29D1621C4E3CEA00A554AC /* ZHAnimationPieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE29D1611C4E3CEA00A554AC /* ZHAnimationPieUITests.swift */; };
 		CE29D1701C4E3D0400A554AC /* ZHAnimationPie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE29D16F1C4E3D0400A554AC /* ZHAnimationPie.swift */; settings = {ASSET_TAGS = (); }; };
 		CE29D1B31C4E659100A554AC /* ZHFannedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE29D1B21C4E659100A554AC /* ZHFannedModel.swift */; settings = {ASSET_TAGS = (); }; };
+		CE29D1B51C4F816300A554AC /* ZHShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE29D1B41C4F816300A554AC /* ZHShapeLayer.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		CE29D1631C4E3CEA00A554AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE29D16F1C4E3D0400A554AC /* ZHAnimationPie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHAnimationPie.swift; sourceTree = "<group>"; };
 		CE29D1B21C4E659100A554AC /* ZHFannedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHFannedModel.swift; sourceTree = "<group>"; };
+		CE29D1B41C4F816300A554AC /* ZHShapeLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHShapeLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				CE29D14D1C4E3CEA00A554AC /* Info.plist */,
 				CE29D16F1C4E3D0400A554AC /* ZHAnimationPie.swift */,
 				CE29D1B21C4E659100A554AC /* ZHFannedModel.swift */,
+				CE29D1B41C4F816300A554AC /* ZHShapeLayer.swift */,
 			);
 			path = ZHAnimationPie;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				CE29D1441C4E3CEA00A554AC /* ViewController.swift in Sources */,
 				CE29D1B31C4E659100A554AC /* ZHFannedModel.swift in Sources */,
 				CE29D1701C4E3D0400A554AC /* ZHAnimationPie.swift in Sources */,
+				CE29D1B51C4F816300A554AC /* ZHShapeLayer.swift in Sources */,
 				CE29D1421C4E3CEA00A554AC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,6 +496,7 @@
 				CE29D1681C4E3CEA00A554AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE29D1691C4E3CEA00A554AC /* Build configuration list for PBXNativeTarget "ZHAnimationPieTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +505,7 @@
 				CE29D16B1C4E3CEA00A554AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE29D16C1C4E3CEA00A554AC /* Build configuration list for PBXNativeTarget "ZHAnimationPieUITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +514,7 @@
 				CE29D16E1C4E3CEA00A554AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

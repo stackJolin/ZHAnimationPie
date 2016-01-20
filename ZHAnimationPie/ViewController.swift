@@ -25,8 +25,7 @@ class ViewController: UIViewController {
         let model2:ZHFannedModel = ZHFannedModel(color: UIColor.greenColor(), value: 0.2, text: nil)
         let model3:ZHFannedModel = ZHFannedModel(color: UIColor.yellowColor(), value: 0.3, text: nil)
         
-        let animationPie:ZHAnimationPie = ZHAnimationPie(frame: CGRectMake(0, 0, 100, 100), values: [model1, model2, model3])
-        
+        let animationPie:ZHAnimationPie = ZHAnimationPie(frame: CGRectMake(50, 50, 100, 100), values: [model1, model2, model3])
         self.view.addSubview(animationPie)
         
         animationPie.reloadData()

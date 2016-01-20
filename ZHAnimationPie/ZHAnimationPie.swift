@@ -19,19 +19,21 @@ class ZHAnimationPie: UIView {
     //百分比数组
     private var percentArray:NSMutableArray = NSMutableArray()
     //遮罩层
-    private var maskLayer:CAShapeLayer?
+    private var maskLayer:ZHShapeLayer?
     
     //存储所有扇形的model
     private var valueArray: [ZHFannedModel] = [ZHFannedModel]()
     //所有的扇形
-    private var fanArray:[CAShapeLayer] = [CAShapeLayer]()
+    private var fanArray:[ZHShapeLayer] = [ZHShapeLayer]()
     //所有的Label
     private var fanLabels:[UILabel] = [UILabel]()
+    //记录位置偏移Layer的Index
+    private var transMakeLayerIndex:Int = -1
     //重载构造函数
     init(frame:CGRect,values:[ZHFannedModel]){
         valueArray = values
-        
         super.init(frame: frame)
+        self.backgroundColor = UIColor.clearColor()
         let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "clickPieView:")
         self.addGestureRecognizer(tapGesture)
     }
@@ -76,28 +78,27 @@ class ZHAnimationPie: UIView {
     private func createLayer(){
         //Block的遍历方式比for快
         for (i,_) in self.valueArray.enumerate() {
-            let subLayer:CAShapeLayer = self.creatreSubLayer(i)
+            let subLayer:ZHShapeLayer = self.creatreSubLayer(i)
             self.layer.addSublayer(subLayer)
             self.fanArray.append(subLayer)
         }
     }
     //创建具体的某一个扇形layer
-    private func creatreSubLayer(index:Int) -> CAShapeLayer{
+    private func creatreSubLayer(index:Int) -> ZHShapeLayer{
         let startAngle:Float = self.startAngleArray[index].floatValue * 2 * Float(M_PI)
         let endAngle:Float = self.endAngleArray[index].floatValue * 2 * Float(M_PI)
         print(startAngle, endAngle)
         let model:ZHFannedModel = self.valueArray[index]
         
-        //下面这种写法是错误的,CALyer以及CAShapeLayer都没有用frame初始化的方法,需要手动去指定frame
-//        let subLayer:CAShapeLayer = CAShapeLayer(frame:self.bounds)
-        let subLayer:CAShapeLayer = CAShapeLayer()
+        //下面这种写法是错误的,CALyer以及ZHShapeLayer都没有用frame初始化的方法,需要手动去指定frame
+//        let subLayer:ZHShapeLayer = ZHShapeLayer(frame:self.bounds)
+        let subLayer:ZHShapeLayer = ZHShapeLayer()
         subLayer.frame = self.bounds
         subLayer.lineWidth = 0;
         subLayer.strokeColor = UIColor.clearColor().CGColor
         subLayer.fillColor = model.color!.CGColor
-        
-        let path:UIBezierPath = UIBezierPath(arcCenter: self.center, radius: self.pieRadius!, startAngle: CGFloat(startAngle), endAngle: CGFloat(endAngle), clockwise: true)
-        path.addLineToPoint(self.center)
+        let path:UIBezierPath = UIBezierPath(arcCenter: CGPointMake(self.bounds.width * 0.5, self.bounds.height * 0.5), radius: self.pieRadius!, startAngle: CGFloat(startAngle), endAngle: CGFloat(endAngle), clockwise: true)
+        path.addLineToPoint(CGPointMake(self.bounds.width * 0.5, self.bounds.height * 0.5))
         path.closePath()
         subLayer.path = path.CGPath
         
@@ -105,11 +106,11 @@ class ZHAnimationPie: UIView {
     }
     //创建遮罩层
     private func createmaskLayer(){
-        let maskLayer:CAShapeLayer = CAShapeLayer()
+        let maskLayer:ZHShapeLayer = ZHShapeLayer()
         maskLayer.frame = self.bounds
-        let path:UIBezierPath = UIBezierPath(arcCenter: self.center, radius: CGFloat(self.pieRadius!), startAngle: CGFloat(-0.5 * M_PI), endAngle: CGFloat(1.5 * M_PI), clockwise: true)
+        let path:UIBezierPath = UIBezierPath(arcCenter: CGPointMake(self.bounds.width * 0.5, self.bounds.height * 0.5), radius: CGFloat(self.pieRadius!), startAngle: CGFloat(-0.5 * M_PI), endAngle: CGFloat(1.5 * M_PI), clockwise: true)
         maskLayer.path = path.CGPath
-        maskLayer.lineWidth = CGFloat(self.pieRadius! * 2)
+        maskLayer.lineWidth = CGFloat(self.pieRadius!) * 2
         maskLayer.strokeColor = UIColor.greenColor().CGColor
         maskLayer.fillColor = UIColor.clearColor().CGColor
         self.layer.mask = maskLayer
@@ -141,11 +142,9 @@ class ZHAnimationPie: UIView {
     private func percentLabel(index:Int) -> UILabel{
         //获取subLayer的中心角度
         let centerAngle:Float = (self.startAngleArray[index].floatValue + self.endAngleArray[index].floatValue) * 2 * Float(M_PI) * 0.5
-        print(centerAngle)
         //计算subLayer中心点的坐标
-        let centerX:CGFloat = self.pieRadius! + CGFloat(cos(centerAngle)) * 0.5 * self.pieRadius!
-        let centerY:CGFloat = self.pieRadius! + CGFloat(sin(centerAngle)) * 0.5 * self.pieRadius!
-        print(centerX,centerY)
+        let centerX:CGFloat = (self.pieRadius! + CGFloat(cos(centerAngle)) * 0.5 * self.pieRadius! * 1.2)
+        let centerY:CGFloat = (self.pieRadius! + CGFloat(sin(centerAngle)) * 0.5 * self.pieRadius! * 1.2)
         //创建Label
         let label:UILabel = UILabel()
         label.text = NSString(string: "\(self.percentArray[index].floatValue * 100)%") as String
@@ -161,18 +160,44 @@ class ZHAnimationPie: UIView {
 //Mark - 手势点击方法
 extension ZHAnimationPie{
     @objc private func clickPieView(gesture:UITapGestureRecognizer){
-        //点击了view
-        print("点击了view")
         let location:CGPoint = gesture.locationInView(gesture.view)
-        var transform:CGAffineTransform = CGAffineTransformIdentity
-        for (_,subLayer) in self.fanArray.enumerate() {
+        //var transform:CGAffineTransform = CGAffineTransformIdentity
+        for (i,subLayer) in self.fanArray.enumerate() {
             if CGPathContainsPoint(subLayer.path, &transform, location, false){
-                self.transFormSelectedLayer(subLayer)
+                self.transFormSelectedLayer(i)
                 break
             }
         }
     }
-    private func transFormSelectedLayer(subLayer:CAShapeLayer){
+    private func transFormSelectedLayer(index:Int){
+        UIView.animateWithDuration(1) { () -> Void in
+            //如果之前有layer进行过仿射变换的话,那么移除仿射变换
+            if let subLayer:ZHShapeLayer = self.fanArray[index]{
+                if self.transMakeLayerIndex != -1 {
+                    if subLayer.isOpen == true {
+                        subLayer.isOpen = false
+                        subLayer.transform = CATransform3DIdentity
+                    }
+                    else{
+                        if let transLayer:ZHShapeLayer = self.fanArray[self.transMakeLayerIndex] {
+                            transLayer.isOpen = false
+                            self.transMakeLayerIndex = -1
+                            transLayer.transform = CATransform3DIdentity
+                        }
+                    }
+                }
+                if index != self.transMakeLayerIndex && subLayer.isOpen == false{
+                    //获取subLayer的中心角度
+                    let centerAngle:Float = (self.startAngleArray[index].floatValue + self.endAngleArray[index].floatValue) * 2 * Float(M_PI) * 0.5
+                    self.transMakeLayerIndex = index
+                    subLayer.isOpen = true
+                    subLayer.transform = CATransform3DMakeTranslation(10 * CGFloat(cos(centerAngle)), 10 * CGFloat(sin(centerAngle)), 0)
+                }
+            }
+        }
+    }
+    //为了处理touchBegan和gesture的冲突
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
     }
 }
